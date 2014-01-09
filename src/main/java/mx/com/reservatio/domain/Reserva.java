@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
 @Table(name="reserva")
 public class Reserva {
 	
-	private int idReserva;
+	private Integer idReserva;
 	private Usuario idUsuario;
 	private Consultorio idConsultorio;
 	private TarifaCategoria idTarifa;
@@ -25,7 +25,8 @@ public class Reserva {
 	
 	@Id
 	@GeneratedValue(strategy = AUTO)
-	public int getIdReserva() {
+	@Column(name = "id_reserva")
+	public Integer getIdReserva() {
 		return idReserva;
 	}
 	

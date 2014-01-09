@@ -17,10 +17,11 @@ public class Complemento {
 	private String nombre;
 	private String descripcion;
 	private String status;
-	private Integer idCategoria;
+	private Categoria idCategoria;
 
 	@Id
 	@GeneratedValue(strategy = AUTO)
+	@Column(name = "id_complemento")
 	public Integer getIdComplemento() {
 		return idComplemento;
 	}
@@ -58,11 +59,11 @@ public class Complemento {
 
 	@ManyToOne
 	@JoinColumn(name = "id_categoria")
-	public Integer getIdCategoria() {
+	public Categoria getIdCategoria() {
 		return idCategoria;
 	}
 
-	public void setIdCategoria(Integer idCategoria) {
+	public void setIdCategoria(Categoria idCategoria) {
 		this.idCategoria = idCategoria;
 	}
 

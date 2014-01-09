@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 @Table(name="tarifa_categoria")
 public class TarifaCategoria {
 	
-	private long idTarifa;
+	private Integer idTarifa;
 	private float tarifa;
 	private Categoria idCategoria;
 	private String descripcion;
@@ -22,11 +22,12 @@ public class TarifaCategoria {
 
 	@Id
 	@GeneratedValue(strategy = AUTO)
-	public long getIdTarifa() {
+	@Column(name = "id_tarifa")
+	public Integer getIdTarifa() {
 		return idTarifa;
 	}
 	
-	public void setIdTarifa(long idTarifa) {
+	public void setIdTarifa(Integer idTarifa) {
 		this.idTarifa = idTarifa;
 	}
 

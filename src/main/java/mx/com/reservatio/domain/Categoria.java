@@ -17,6 +17,7 @@ public class Categoria {
 
 	@Id
 	@GeneratedValue(strategy = AUTO)
+	@Column(name = "id_categoria")
 	public Integer getIdCategoria() {
 		return idCategoria;
 	}

@@ -21,6 +21,7 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = AUTO)
+	@Column(name = "id_usuario")
 	public Integer getIdUsuario() {
 		return idUsuario;
 	}
